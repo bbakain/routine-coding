@@ -11,7 +11,7 @@ export default async function RootLayout({ children }) {
   const darren = await fetch('http://localhost:9999/topics')
   const topics = await darren.json();
 
-  const conCell = await fetch('http://localhost:9998/cellStaffs')
+  const conCell = await fetch('${process.env.NEXT_PUBLIC_API_URL-1}cellStaffs/${id}')
   const cellStaffs = await conCell.json();
   /*Clinet Component
   const [topics, setTopics] = useState([]);
