@@ -10,7 +10,7 @@ export default function Update(props){
   const params = useParams();
   const id = params.id;
   async function refresh(){
-    const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL-1}cellStaffs/${id}`);
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL1}cellStaffs/${id}`);
     const cellStaffs = await resp.json();
     setTitle(cellStaffs.title);
     setBody(cellStaffs.body);
@@ -24,7 +24,7 @@ export default function Update(props){
     const title = evt.target.title.value;
     const body = evt.target.body.value;
     
-    const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL-1}cellStaffs/${id}`, {
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL1}cellStaffs/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'

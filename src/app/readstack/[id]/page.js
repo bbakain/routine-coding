@@ -1,5 +1,5 @@
 export default async function Readstack(props){
-    const resp = await fetch(`http://localhost:9999/topics/${props.params.id}`);
+    const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL2}topics/${props.params.id}`);
     const topic = await resp.json();
     return(
         <>

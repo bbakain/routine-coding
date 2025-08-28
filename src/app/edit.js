@@ -16,7 +16,7 @@ export function Edit(){
                 </li>
                 <li><input type="button" value="delete" onClick={()=>{
                             const options = {method:'DELETE'}
-                            fetch(`${process.env.NEXT_PUBLIC_API_URL-1}cellStaffs/${id}`+id, options)
+                            fetch(`${process.env.NEXT_PUBLIC_API_URL1}cellStaffs/${id}`+id, options)
                                 .then(resp=>resp.json)
                                 .then(result=>{
                                 router.push(`/`);
